@@ -1,0 +1,309 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+
+  nav ul li a:hover {
+    background-color: #ddd;
+  }
+  
+  main {
+    margin: 20px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  section h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .featured-books {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .book-card {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .book-card h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .book-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+  }
+
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .book-list .book-listing {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .book-list .book-listing:hover {
+    transform: scale(1.05);
+  }
+  
+  .book-list .book-listing img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .book-list .book-listing:hover img {
+    opacity: 1;
+  }
+
+  footer {
+    background-color: #f2f2f2;;
+    color: black;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2b6de8;
+}
+
+/* Order Form */
+.order-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.order-form {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s forwards;
+}
+
+.search-bar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 5px;
+  width: 300px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button[type="submit"] {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.order-form label,
+.order-form input,
+.order-form button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.order-form label {
+  font-weight: bold;
+}
+
+.order-form input[type="text"],
+.order-form input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.order-form button {
+  padding: 8px 16px;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-form button:hover {
+  background-color: #2b6de8;
+}
+
+.new-books h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+  
+  /* Media Queries for responsiveness*/
+  @media only screen and (max-width: 768px) {
+   
+    h1 {
+      font-size: 24px;
+    }
+    
+    nav ul li {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    .featured-books {
+      flex-direction: column;
+    }
+    
+    .book-card {
+      width: 100%;
+    }
+    
+    .book-list .book-listing {
+      width: 100%;
+  }
+
+  .book-list .book-listing img{
+    opacity: 1;
+}
+
+ }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+   
+   .book-card {
+      width: 45%;
+    }
+
+    .book-list .book-listing {
+      width: 45%;
+    }
+    
+    .book-list .book-listing img{
+    opacity: 1;
+}
+
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    .book-card {
+      width: 30%;
+    }
+
+    .book-list .book-listing {
+      width: 30%;
+  }
+}
